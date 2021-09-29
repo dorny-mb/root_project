@@ -4,7 +4,7 @@ import { EmptyHandler, Nav, StatTable } from "../../components";
 import { PageWrap } from "../../layouts";
 import { useFetch } from "../../hooks";
 import { DINOPARK_ENDPOINT } from "../../constants";
-import { genCharArray } from "../../utils";
+import { extractXY, genCharArray } from "../../utils";
 import { Park } from "../../types";
 
 const letterArr = genCharArray("A", "Z");
@@ -21,9 +21,9 @@ const Home: React.FC = () => {
   useEffect(() => {
     if (data) {
       data?.forEach((item: Park) => {
+        // Not selecting items that do not have a sell, I'm assuming the data doesn't need to be logged.
         if (item.location) {
-          const y = parseInt(item.location.slice(1));
-          const x = letterArr.indexOf(item.location[0]);
+          const { x, y } = extractXY(item.location, letterArr);
           if (y !== -1 && arr.current?.[y]?.[x]) {
             arr.current[y][x] = {
               kind: item.kind,

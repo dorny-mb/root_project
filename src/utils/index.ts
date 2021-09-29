@@ -1,5 +1,3 @@
-export const calcTimestamp = (value = 0) => value * 1000;
-export const getDay = (value = 0) => new Date(calcTimestamp(value)).getDay();
 export const genCharArray = (charA: string, charZ: string) => {
   const arr = [];
   let j = charZ.charCodeAt(0);
@@ -7,4 +5,9 @@ export const genCharArray = (charA: string, charZ: string) => {
     arr.push(String.fromCharCode(i));
   }
   return arr;
+};
+export const extractXY = (location: string, arr: string[]) => {
+  const y = parseInt(location.slice(1));
+  const x = arr.indexOf(location[0]);
+  return { x, y };
 };
