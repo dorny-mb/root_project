@@ -86,7 +86,8 @@ I really enjoyed creating basic logic frontend based solutions like this (it rea
 
 ### How you think we can improve this challenge
 
-Including some direct interations in the UX such as the status details can be a pretty good addition to the chalenge.
+- Including some direct interations in the UX such as the status details can be a pretty good addition to the chalenge.
+- Implementing some sort of data polling system can also be a good idea so the data can automatically be refetched after a period of time.
 
 ## Authors
 
