@@ -49,7 +49,7 @@ const Home: React.FC = () => {
         flexDirection="column"
         flex={1}
       >
-        <Nav />
+        <Nav isLoaded={!loading} />
         <Center flex={1}>
           <StatTable arr={arr.current} isLoaded={!loading} />
         </Center>

@@ -70,7 +70,7 @@ yarn start
 
 The project should now be available at http://localhost:3000
 
-![login page](https://dorny-s-files.s3.amazonaws.com/Screenshot+2021-09-29+at+04.15.08.png)
+![login page](https://dorny-s-files.s3.amazonaws.com/Screenshot+2021-09-29+at+05.34.59.png)
 
 ### Approach
 
@@ -78,7 +78,8 @@ I built a matrix with the required number of rows and columns and filled in the 
 
 ### What I would do differently if I had to do it again
 
-Improve the overall code structure (make it even more scalable) and design.
+- Improve the overall code structure (make it even more scalable) and design.
+- I will have a more dynamic way of handleling most of the listed events.
 
 ### What you learned during the project
 
