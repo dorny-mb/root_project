@@ -58,7 +58,11 @@ const MatrixTable: React.FC<MatrixTableProps> = ({ arr }) => {
                 top={0}
                 left={0}
               >
-                <Image src={images.wrench} width="50%" />
+                {/* TODO:: Add more conditions */}
+                {element.kind !== "maintenance_performed" &&
+                  element.kind !== "dino_fed" && (
+                    <Image src={images.wrench} width="50%" />
+                  )}
               </Center>
             </Tooltip>
           )}

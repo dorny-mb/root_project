@@ -32,12 +32,16 @@ const StatTable: React.FC<StatTableProps> = ({ isLoaded, arr }) => {
       _hover={{ boxShadow: theme.boxShadow }}
     >
       <CardHeader justify="space-between" align="center">
-        <Heading as="h3" size="lg">
-          Park Zones
-        </Heading>
-        <Heading as="h5" color="gray.400" size="md" fontWeight="medium">
-          {moment().format("DD MMM YYYY")}
-        </Heading>
+        <Skeleton isLoaded={isLoaded}>
+          <Heading as="h3" size="lg">
+            Park Zones
+          </Heading>
+        </Skeleton>
+        <Skeleton isLoaded={isLoaded}>
+          <Heading as="h5" color="gray.400" size="md" fontWeight="medium">
+            {moment().format("DD MMM YYYY")}
+          </Heading>
+        </Skeleton>
       </CardHeader>
       <Container
         maxW="container.lg"
